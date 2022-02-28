@@ -5,5 +5,5 @@ pillow==7.2.0
 tqdm==4.50.2
 trimesh==3.8.10
 matplotlib==3.3.1
-wxpython==4.0.7
+wxpython
 simple_3dviz==0.2.1

@@ -13,7 +13,7 @@ from simple_3dviz.behaviours.misc import LightToCamera
 from simple_3dviz.behaviours.keyboard import SnapshotOnKey
 from simple_3dviz.behaviours.movements import CameraTrajectory
 from simple_3dviz.behaviours.trajectory import Circle
-from simple_3dviz.window import show
+#from simple_3dviz.window import show
 
 from arguments import add_dataset_parameters
 from utils import load_config, points_on_sphere
@@ -194,8 +194,8 @@ def main(argv):
                 speed=1/180
             )
         ]
-        show(renderables, size=args.window_size,
-             behaviours=behaviours + [SnapshotOnKey()])
+        #show(renderables, size=args.window_size,
+        #     behaviours=behaviours + [SnapshotOnKey()])
 
     print("Saving renderables to file")
     for i in range(n_primitives):

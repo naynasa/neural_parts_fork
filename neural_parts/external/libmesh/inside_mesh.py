@@ -1,7 +1,7 @@
 import numpy as np
 import pyximport
 pyximport.install()
-from triangle_hash import TriangleHash as _TriangleHash
+from .triangle_hash import TriangleHash as _TriangleHash
 
 
 def check_mesh_contains(mesh, points, hash_resolution=512):

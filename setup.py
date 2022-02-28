@@ -40,7 +40,8 @@ def get_extensions():
     return cythonize([
         Extension(
             "neural_parts.external.libmesh.triangle_hash",
-            sources=["scripts/neural_parts/external/libmesh/triangle_hash.pyx"],
+            sources=["/content/neural_parts_fork/scripts/neural_parts/external/libmesh/triangle_hash.pyx"],
+            
             include_dirs=[np.get_include()],
             libraries=["m"]  # Unix-like specific
         )

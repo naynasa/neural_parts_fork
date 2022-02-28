@@ -6,3 +6,4 @@ from .inside_mesh import (
 __all__ = [
     check_mesh_contains, MeshIntersector, TriangleIntersector2d
 ]
+

@@ -4,7 +4,7 @@ try:
 except ImportError:
     from yaml import Loader
 
-from ...utils import sphere_mesh
+from neural_parts.utils import sphere_mesh
 
 
 def load_config(config_file):

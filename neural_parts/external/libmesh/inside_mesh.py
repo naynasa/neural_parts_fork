@@ -1,4 +1,6 @@
 import numpy as np
+import pyximport
+pyximport.install(setup_args={"script_args" : ["--verbose"]})
 from triangle_hash import TriangleHash as _TriangleHash
 
 

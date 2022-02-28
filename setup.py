@@ -25,7 +25,7 @@ def collect_docstring(lines):
 
 def collect_metadata():
     meta = {}
-    with open(path.join("scripts/neural_parts", "__init__.py")) as f:
+    with open(path.join("neural_parts", "__init__.py")) as f:
         lines = iter(f)
         meta["description"] = collect_docstring(lines)
         for line in lines:
@@ -40,8 +40,7 @@ def get_extensions():
     return cythonize([
         Extension(
             "neural_parts.external.libmesh.triangle_hash",
-            sources=["/content/neural_parts_fork/scripts/neural_parts/external/libmesh/triangle_hash.pyx"],
-            
+            sources=["neural_parts/external/libmesh/triangle_hash.pyx"],
             include_dirs=[np.get_include()],
             libraries=["m"]  # Unix-like specific
         )

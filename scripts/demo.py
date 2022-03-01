@@ -199,7 +199,7 @@ def main(argv):
 
     print("Saving renderables to file")
     for i in range(n_primitives):
-        m = trimesh.Trimesh(vertices[0, :, i].detach(), faces)
+        m = trimesh.Trimesh(vertices.cpu()[0, :, i].detach(), faces.cpu())
         m.export(
             os.path.join(args.output_directory, "part_{:03d}.obj".format(i)),
             file_type="obj"

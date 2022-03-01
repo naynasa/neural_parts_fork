@@ -165,8 +165,8 @@ def main(argv):
     parts = range(n_primitives)
     renderables = [
         Mesh.from_faces(
-            vertices[0, :, i],
-            faces,
+            vertices.cpu()[0, :, i],
+            faces.cpu(),
             colors=get_colors(i)
         )
         for i in parts
